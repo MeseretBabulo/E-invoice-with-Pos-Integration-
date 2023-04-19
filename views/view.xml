@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+  <template id="pos_customization" inherit_id="point_of_sale.assets">
+       <xpath expr="." position="inside">
+        <!-- Style sheet for button -->
+       <link rel="stylesheet" href="/pos_customization/static/src/css/create_invoice.css"/>
+        <!-- Java Script file -->
+        <script type="text/javascript" src="/pos_customization/static/src/js/create_invoice.js"/>
+         </xpath>
+</template>
+</data>
+</odoo>

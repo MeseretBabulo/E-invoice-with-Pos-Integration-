@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+    <record id="view_posorder_form_view" model="ir.ui.view">
+        <field name="name">pos.order.form.inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='refund']" position="after">
+            
+                <button name="send_invoice" string="send E-Invoice" type="object"  class="oe_highlight"
+                        attrs="{'invisible': ['|', ('invoice_group', '=', False), ('state','==','e_invoic_send')]}"/>
+                
+                
+            </xpath>
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,paid,e_invoic_send,done" />
+            </xpath>
+
+            
+
+
+        </field>
+    </record>
+</odoo>

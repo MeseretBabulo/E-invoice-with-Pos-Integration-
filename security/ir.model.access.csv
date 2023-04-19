@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_purchase,pos.purchase,model_pos_purchase,,1,1,1,1
+access_pos_purchase_line,pos.purchase.line,model_pos_purchase_line,,1,1,1,1
